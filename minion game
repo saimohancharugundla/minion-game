@@ -1,0 +1,21 @@
+s=input()
+vowels=['a','e','i','o','u']
+kev=[]
+stu=[]
+for k in range(len(s)):
+	if s[k] not in vowels:
+		for j in range(len(s)+1):
+			stu.append(s[k:j])
+		j=k
+	else:
+		for l in range(len(s)+1):
+			kev.append(s[k:l])
+		l=k
+z=list(filter(None,stu))
+b=list(filter(None,kev))
+if (len(z)>len(b)):
+	print("Stuart",len(z))
+elif(len(z)<len(b)):
+	print("Kevin",len(b))
+else:
+	print("Draw")
